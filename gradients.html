@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gradient stuff</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+
+    <svg width="500" height="600" version="1.1" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="gradientThing">
+            <stop class="stop1" offset="0%" />
+            <stop class="stop2" offset="40%" />
+            <stop class="stop3" offset="100%" />
+          </linearGradient>
+        </defs>
+
+ <rect id="rect1" x="0" y="20" rx="150" ry="150" width="300" height="200" />
+
+ <defs>
+    <radialGradient id="grad1" cx="25%" cy="3%" r="60%" fx="30%" fy="50%">
+      <stop offset="8%" stop-color="purple" />
+      <stop offset="70%" stop-color="cyan" />
+    </radialGradient>
+  </defs>
+
+  <rect fill="url(#grad1)" x="20" y="250" rx="0" ry="0" width="300" height="200" />
+
+
+  <defs>
+    <radialGradient id="grad4" cx="25%" cy="25%" spreadMethod="reflect">
+      <stop offset="0%" stop-color="cyan" />
+      <stop offset="80%" stop-color="purple" />
+    </radialGradient>
+  </defs>
+  
+  <ellipse cx="120" cy="525" rx="100" ry="50" fill="url(#grad4)" />
+
+</svg>
+</body>
+</html>

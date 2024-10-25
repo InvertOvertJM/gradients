@@ -1,0 +1,13 @@
+#rect1 {
+    fill: url(#gradientThing);
+  }
+  .stop1 {
+    stop-color: purple;
+  }
+  .stop2 {
+    stop-color: thistle;
+    stop-opacity: 0;
+  }
+  .stop3 {
+    stop-color: cyan;
+  }
