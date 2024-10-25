@@ -19,39 +19,33 @@
           <filter id="f1" x="0" y="0">
             <feGaussianBlur in="SourceGraphic" stdDeviation="5">
           </filter>
+
+          <radialGradient id="grad2" cx="25%" cy="3%" r="60%" fx="30%" fy="50%">
+            <stop offset="0%" stop-color="black" />
+            <stop offset="100%" stop-color="red" />
+          </radialGradient>
+      
+          <filter id="f2">
+          <feTurbulence type="turbulence"
+          baseFrequency="0.03"
+          numOctaves="1"
+          result="turbulence">
+        </filter>
+
+        <radialGradient id="grad3" cx="25%" cy="25%" spreadMethod="repeat">
+          <stop offset="0%" stop-color="cyan" />
+          <stop offset="100%" stop-color="purple" />
+        </radialGradient>
+    
+        <filter id="f3" x="0" y="0">
+          <feDropShadow dx="20" dy="20" stdDeviation="0.9" flood-color="red" flood-opacity="0.3">
+        </filter>
         </defs>
 
- <rect id="rect1" x="0" y="20" rx="150" ry="150" width="300" height="200" filter="url(#f1)"/>
-
- <defs>
-    <radialGradient id="grad1" cx="25%" cy="3%" r="60%" fx="30%" fy="50%">
-      <stop offset="0%" stop-color="purple" />
-      <stop offset="100%" stop-color="cyan" />
-    </radialGradient>
-
-    <filter id="f2">
-    <feTurbulence type="turbulence"
-    baseFrequency="0.07"
-    numOctaves="1"
-    result="turbulence">
-  </filter>
-  </defs>
-
-  <rect fill="url(#grad1)" x="20" y="250" rx="0" ry="0" width="300" height="200" filter="url(#f2)" />
-
-
-  <defs>
-    <radialGradient id="grad4" cx="25%" cy="25%" spreadMethod="repeat">
-      <stop offset="0%" stop-color="cyan" />
-      <stop offset="100%" stop-color="purple" />
-    </radialGradient>
-
-    <filter id="f3" x="0" y="0">
-      <feDropShadow dx="20" dy="20" stdDeviation="0.7" flood-color="black" flood-opacity="0.5">
-    </filter>
-  </defs>
-  
-  <ellipse cx="120" cy="525" rx="100" ry="50" fill="url(#grad4)" filter="url(#f3)" />
+        <rect id="rect1" x="0" y="20" rx="150" ry="150" width="300" height="200" filter="url(#f1)"/>
+<rect  x="20" y="250" rx="0" ry="0" width="300" height="200" filter="url(#f2)" />
+ <ellipse cx="120" cy="525" rx="100" ry="50" fill="url(#grad3)" filter="url(#f3)" />
+ <rect x="20" y="250" rx="0" ry="0" width="300" height="200" fill="url(#grad2)"/>
 
 </svg>
 </body>
